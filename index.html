@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Space Shooter</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="game.js" defer></script>
+</head>
+<body>
+  <main class="container">
+    <h1>🚀 SPACE SHOOTER</h1>
+    <p class="subtitle">Derrote os inimigos e destrua os chefões!</p>
+
+    <section class="hud">
+      <div>Fase: <span id="phase">1</span></div>
+      <div>Pontos: <span id="score">0</span></div>
+      <div>Vidas P1: <span id="hp1">3</span></div>
+      <div id="p2status" hidden>Vidas P2: <span id="hp2">3</span></div>
+    </section>
+
+    <div class="game-area">
+      <canvas id="game" width="900" height="520"></canvas>
+
+      <section id="menu" class="overlay">
+        <div class="panel">
+          <h2>MISSÃO ESPACIAL</h2>
+          <p>Sobreviva às ondas e vença os cinco chefões.</p>
+          <button id="solo">Jogar solo</button>
+          <button id="duo" class="secondary">2 jogadores</button>
+        </div>
+      </section>
+
+      <section id="end" class="overlay" hidden>
+        <div class="panel">
+          <h2 id="endTitle">Fim de jogo</h2>
+          <p id="endMessage"></p>
+          <button id="retry">Jogar novamente</button>
+          <button id="back" class="secondary">Menu principal</button>
+        </div>
+      </section>
+    </div>
+
+    <section class="instructions">
+      <p><strong>Jogador 1:</strong> W A S D para mover e ESPAÇO para atirar.</p>
+      <p><strong>Jogador 2:</strong> SETAS para mover e ENTER para atirar.</p>
+      <p>🔵 Tiro duplo · 🟡 Tiro rápido · 🟢 Escudo</p>
+    </section>
+  </main>
+</body>
+</html>
